@@ -28,8 +28,12 @@ class Store:
         return None
 
     def overview(self) -> dict[str, object]:
+        # 发苗模块的人员/点位/排班/台账是配置与依据数据，不计入业务看板
+        config_tables = {"planting_person", "planting_station", "planting_roster", "planting_ledger"}
         modules: list[dict[str, object]] = []
         for name in self.module_names():
+            if name in config_tables:
+                continue
             rows = self.rows(name)
             modules.append({
                 "name": name,

@@ -33,3 +33,35 @@ body { margin: 0; background: #f6f8fb; color: #1f2937; }
 .link { border: none; background: none; color: var(--brand); cursor: pointer; padding: 0; }
 .page-foot { display: flex; justify-content: space-between; margin-top: 8px; font-size: 12px; color: var(--muted); }
 .error-text { color: #b42318; }
+
+/* 义务植树发苗 */
+.identity-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.perm-box { flex: 1; min-width: 260px; display: flex; flex-direction: column; gap: 2px; padding: 8px 10px; border-radius: 6px; font-size: 12px; border: 1px solid var(--border); background: #f8fafc; }
+.perm-box strong { font-size: 13px; }
+.perm-box.tone-registrar { border-color: #93c5fd; background: #eff6ff; }
+.perm-box.tone-nursery { border-color: #86efac; background: #f0fdf4; }
+.perm-box.tone-readonly { border-color: #cbd5e1; background: #f8fafc; color: var(--muted); }
+.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 12px; }
+.tab { border: none; background: none; padding: 8px 14px; cursor: pointer; font-size: 13px; color: var(--muted); border-bottom: 2px solid transparent; }
+.tab.active { color: var(--brand); border-bottom-color: var(--brand); font-weight: 600; }
+.tab-panel { background: transparent; }
+.form-card { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; background: #fff; border: 1px solid var(--border); border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+.form-card select, .identity-bar select, .filter-bar select, .modal textarea { width: 100%; padding: 6px 8px; border: 1px solid var(--border); border-radius: 6px; font-size: 13px; }
+.ledger-preview { background: #fff; border: 1px dashed var(--border); border-radius: 8px; padding: 10px 12px; font-size: 13px; }
+.warn-text { color: #b45309; margin: 4px 0 0; }
+.feedback { display: flex; flex-direction: column; gap: 4px; border-radius: 8px; padding: 10px 12px; font-size: 13px; margin-bottom: 12px; border: 1px solid; }
+.feedback.ok { background: #f0fdf4; border-color: #86efac; color: #166534; }
+.feedback.error { background: #fef2f2; border-color: #fca5a5; color: #991b1b; }
+.feedback .missing { font-weight: 600; }
+.check-list { margin: 4px 0 0; padding-left: 18px; }
+.badge { display: inline-block; padding: 1px 8px; border-radius: 999px; font-size: 12px; }
+.badge.ok { background: #dcfce7; color: #166534; }
+.badge.bad { background: #fee2e2; color: #991b1b; }
+.badge.warn { background: #fef9c3; color: #854d0e; }
+.sub { color: var(--muted); font-size: 12px; }
+.block-title { font-size: 14px; margin: 16px 0 8px; }
+.modal-mask { position: fixed; inset: 0; background: rgba(15, 23, 42, 0.45); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.modal { background: #fff; border-radius: 10px; padding: 18px; width: 460px; max-width: calc(100vw - 32px); }
+.modal h3 { margin: 0 0 8px; font-size: 15px; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 12px; }
+.modal textarea { resize: vertical; }

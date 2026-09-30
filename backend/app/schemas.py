@@ -28,6 +28,19 @@ class EntryPayload(BaseModel):
     remark: str | None = None
 
 
+class IssueSeedlingsPayload(BaseModel):
+    """义务植树发苗：按报名编号把台账应发的苗木发放到某个点位。"""
+
+    signup_code: str = Field(..., description="活动报名表编号，如 BM-2026-0001")
+    quantity: int | None = Field(default=None, description="实发棵数；须与台账应发棵数一致")
+
+
+class ReturnSeedlingsPayload(BaseModel):
+    """苗木管理员退回一条已发放记录，必须写明缘由。"""
+
+    reason: str = Field(..., min_length=1, description="退回缘由，不能为空")
+
+
 
 class PlotEntry(BaseModel):
     """绿地明细结构。"""
